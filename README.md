@@ -1,22 +1,22 @@
 # README
 
-** Ruby version
+**Ruby version
 
-** System dependencies
+**System dependencies
 
-** Configuration
+**Configuration
 
-** Database creation
+**Database creation
 
-** Database initialization
+**Database initialization
 
-** How to run the test suite
+**How to run the test suite
 
-** Services (job queues, cache servers, search engines, etc.)
+**Services (job queues, cache servers, search engines, etc.)
 
-** Deployment instructions
+**Deployment instructions
 
-* Beyond Finance Rails Take Home
+*Beyond Finance Rails Take Home
 For your sample project, you’ll be creating a Rails app. 
 Imagine a platform for creating and serving Visual Experiences. For the 
 purposes of this exercise, we’ll slim down “Visual Experience” to just “an 
@@ -32,7 +32,7 @@ The campaigns page should list all of its associated assets, as well as their
 associated criteria. So that you don’t have to deal with actually accepting 
 image uploads, you can just hard-code a static thumbnail for them here. 
 Sample JSON representation of an asset: 
-```{ 
+`{ 
 name: ‘asset 1’,
 criteria: [
 {type: “device”, operand: “iphone”, image: https://s3url.com/image.png, order: 1}, 
@@ -41,7 +41,7 @@ image: “https://s3url.com/old_image”, order: 3, criteria: [
 {type: “device”, operand: “windows_phone”}, 
 {type: “device”, operand: “palm_pilot”} ]}, 
 {type: “always”, operand: null, order: 1000, image: “https://s3url.com/default.png”} 
-] }``` 
+] }`
 The assets are fine showing the image in text as shown above. This 
 exercise should not be concerned with the actual rendering of assets. 
 Here, we are only building a page to display campaigns.
