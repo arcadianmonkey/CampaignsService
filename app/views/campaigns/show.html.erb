@@ -1,0 +1,32 @@
+<h1>Campaigns</h1>
+
+<% @campaigns.each do |campaign| %>
+    <p>
+        Campaign: <%=campaign.name%><br>
+        Email: <%=campaign.email%><br>
+        Date: <%=campaign.date%>
+    </p>
+    <ul>
+    <% campaign.assets.each do |asset| %>
+        <li>
+            <%=asset.name%>
+            <ul>
+            <% asset.criterions.each do |criterion| %>
+                <li>
+                    <%=criterion.image%>
+                    <% if criterion.criterion_type == "device" %>
+                        <%=criterion.operand%>
+                    <% elsif criterion.criterion_type == "nested" %>
+                        <% criterion.criterions.each do |child| %>
+                            <%=child.operand%>
+                        <% end %>
+                    <% else %>
+                        default
+                    <% end %>
+                </li>
+            <% end %>
+        </li>
+    <% end %>
+    </ul>
+    <hr>
+<% end %>

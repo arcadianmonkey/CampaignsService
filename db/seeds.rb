@@ -1,9 +1,54 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+Criterion.destroy_all
+Asset.destroy_all
+Campaign.destroy_all
+
+Campaign.create!(
+    name: "Sample Campaign",
+    email: "pharris2697@gmail.com",
+    date: Date.new(2023, 11, 1)
+)
+
+campaign = Campaign.where(name: "Sample Campaign").first
+campaign.assets.create!(
+    name: "Asset 1"
+)
+
+asset = campaign.assets.first
+asset.criterions.create!([
+    {
+        criterion_type: "device",
+        operand: "iphone",
+        image: "placeholder.gif",
+        order: 1
+    },
+    {
+        criterion_type: "device",
+        operand: "android",
+        image: "placeholder.gif",
+        order: 2
+    },
+    {
+        criterion_type: "nested",
+        image: "placeholder.gif",
+        order: 3
+    },
+    {
+        criterion_type: "always",
+        image: "placeholder.gif",
+        order: 1000
+    }
+])
+
+nesting_parent = asset.criterions.where(criterion_type: "nested").first
+nesting_parent.criterions.create!([
+    {
+        criterion_type: "device",
+        operand: "windows_phone",
+        order: 1
+    },
+    {
+        criterion_type: "device",
+        operand: "palm_pilot",
+        order: 2
+    }
+])
