@@ -1,15 +1,19 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  parent_id: 1
-  type: 
-  operand: MyString
-  image: MyString
+  criterion_type: device
+  operand: iphone
+  image: test1.jpeg
   order: 1
 
 two:
-  parent_id: 1
-  type: 
-  operand: MyString
-  image: MyString
-  order: 1
+  criterion_type: nested
+  operand: nil
+  image: test2.jpeg
+  order: 2
+
+three:
+  criterion_type: always
+  operand: nil
+  image: test2.jpeg
+  order: 1000

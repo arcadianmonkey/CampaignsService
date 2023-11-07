@@ -1,9 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  campaign_id: 1
-  name: MyString
+  name: Asset_1
 
 two:
-  campaign_id: 1
-  name: MyString
+  name: Asset_2

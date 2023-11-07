@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  email: MyString
+  name: Campaign_1
+  email: pharris2697@gmail.com
   date: 2023-11-06
 
 two:
-  name: MyString
-  email: MyString
+  name: Campaign_2
+  email: pharris2697@gmail.com
   date: 2023-11-06
