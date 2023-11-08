@@ -1,21 +1,5 @@
 # README
 
-## Ruby version
-
-## System dependencies
-
-## Configuration
-
-## Database creation
-
-## Database initialization
-
-## How to run the test suite
-
-## Services (job queues, cache servers, search engines, etc.)
-
-## Deployment instructions
-
 # Beyond Finance Rails Take Home
 For your sample project, you’ll be creating a Rails app. 
 Imagine a platform for creating and serving Visual Experiences. For the 
@@ -53,3 +37,37 @@ with those controller action appropriately. As you can see, criteria can be
 nested. This has implications at render time, but you don’t have to worry 
 about that. What you will have to worry about is what payload to expect in 
 the create action to facilitate that.
+
+## Versions
+Ruby 3.2.2
+Rails 7.1.1
+
+## Database creation
+```
+> rails db:migrate
+```
+
+## Database initialization
+```
+> rails db:seed
+```
+
+## How to run the test suite
+```
+> rails test
+```
+
+## Deployment instructions
+```
+> bin/setup
+```
+
+Sample data will be seeded into the database. More data may be added through console commands.
+
+## Usage
+```
+> rails server
+```
+
+Navigate to "localhost:3000/campaign/show" to see the Campaigns page.
+"localhost:3000/campaign/show/{:id}" will display the assets of a single campaign with the specified ID.

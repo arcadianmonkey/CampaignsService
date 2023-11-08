@@ -35,8 +35,7 @@ class Campaign < ApplicationRecord
                     criterion["criteria"].each do |child|
                         newCriterionRecord.criterions.create(
                             criterion_type: child["type"],
-                            operand: child["operand"],
-                            order: child["order"]
+                            operand: child["operand"]
                         )
                     end
                 end
