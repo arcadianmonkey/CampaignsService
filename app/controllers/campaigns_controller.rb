@@ -1,4 +1,8 @@
 class CampaignsController < ApplicationController
+  # disabling CSRF; Ideally, I should have created the project with the --api option to avoid
+  # including the CSRF middleware
+  protect_from_forgery with: :null_session
+
   def show
     @campaigns =
       if params[:id]
