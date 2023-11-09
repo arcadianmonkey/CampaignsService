@@ -43,12 +43,10 @@ nesting_parent = asset.criterions.where(criterion_type: "nested").first
 nesting_parent.criterions.create!([
     {
         criterion_type: "device",
-        operand: "windows_phone",
-        order: 1
+        operand: "windows_phone"
     },
     {
         criterion_type: "device",
-        operand: "palm_pilot",
-        order: 2
+        operand: "palm_pilot"
     }
 ])
