@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "8fd01df7-5827-49ea-b8d1-2db9bfb10741",
+		"name": "Beyond Campaigns",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15319636"
+	},
+	"item": [
+		{
+			"name": "create (simple)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\": \"Campaign_3\",\r\n    \"email\": \"pharris2697@gmail.com\",\r\n    \"date\": \"2020-10-01\",\r\n    \"assets\": [{\r\n      \"name\": \"Asset_3\",\r\n      \"criteria\": [{\r\n        \"type\": \"device\",\r\n        \"operand\": \"iphone\",\r\n        \"image\": \"placeholder.jpeg\",\r\n        \"order\": 1\r\n      },\r\n      {\r\n        \"type\": \"device\",\r\n        \"operand\": \"android\",\r\n        \"image\": \"placeholder.jpeg\",\r\n        \"order\": 2\r\n      }]\r\n    },\r\n    {\r\n      \"name\": \"Asset_4\",\r\n      \"criteria\": [{\r\n        \"type\": \"device\",\r\n        \"operand\": \"windows_phone\",\r\n        \"image\": \"placeholder.jpeg\",\r\n        \"order\": 3\r\n      },\r\n      {\r\n        \"type\": \"device\",\r\n        \"operand\": \"palm_pilot\",\r\n        \"image\": \"placeholder.jpeg\",\r\n        \"order\": 4\r\n      }]\r\n    }]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root_url}}/campaigns/create",
+					"host": [
+						"{{root_url}}"
+					],
+					"path": [
+						"campaigns",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create (nested)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Campaign_4\",\r\n    \"email\": \"pharris2697@gmail.com\",\r\n    \"date\": \"November 11, 2022\",\r\n    \"assets\": [{\r\n      \"name\": \"Asset_5\",\r\n      \"criteria\": [{\r\n        \"type\": \"nested\",\r\n        \"image\": \"placeholder.jpeg\",\r\n        \"order\": 1,\r\n        \"criteria\": [{\r\n          \"type\": \"device\",\r\n          \"operand\": \"windows_phone\",\r\n          \"image\": \"placeholder.jpeg\",\r\n          \"order\": 3\r\n        },\r\n        {\r\n          \"type\": \"device\",\r\n          \"operand\": \"palm_pilot\",\r\n          \"image\": \"placeholder.jpeg\",\r\n          \"order\": 4\r\n        }]\r\n      }]\r\n    }]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root_url}}/campaigns/create",
+					"host": [
+						"{{root_url}}"
+					],
+					"path": [
+						"campaigns",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "root_url",
+			"value": "localhost:3000",
+			"type": "string"
+		}
+	]
+}
